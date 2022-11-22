@@ -1,0 +1,9 @@
+#N canvas 954 552 948 443 12;
+#X obj 53 121 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 53 91 metro 1000;
+#X obj 53 31 loadbang;
+#X msg 53 61 1;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
