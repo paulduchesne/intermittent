@@ -8,6 +8,21 @@
 #000000 #000000 0 1;
 #X obj 45 224 * 127;
 #X obj 45 44 phasor~ 0.000833333;
+#X obj 261 150 wrap~;
+#X obj 271 180 loadbang;
+#X msg 271 210 1;
+#X obj 261 270 snapshot~;
+#X floatatom 261 300 5 0 0 0 - - - 0;
+#X obj 271 240 metro 100;
+#X obj 264 360 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 261 330 * 127;
+#X obj 261 120 *~;
+#X obj 261 30 loadbang;
+#X msg 261 60 7;
+#X obj 261 90 expr 1 / ($f1 / 1200);
+#X text 42 277 twenty minute spine;
+#X text 259 379 seven second phrase;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -15,3 +30,15 @@
 #X connect 4 0 2 0;
 #X connect 6 0 5 0;
 #X connect 7 0 2 0;
+#X connect 7 0 16 0;
+#X connect 8 0 11 0;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 12 0 15 0;
+#X connect 13 0 11 0;
+#X connect 15 0 14 0;
+#X connect 16 0 8 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 16 1;
