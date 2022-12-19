@@ -1,0 +1,24 @@
+#N canvas 954 32 948 963 12;
+#X obj 21 26 curve;
+#X obj 331 26 curve;
+#N canvas 1432 32 470 443 spine 0;
+#X obj 56 56 loadbang;
+#X msg 56 86 1;
+#X obj 46 146 snapshot~;
+#X floatatom 46 176 5 0 0 0 - - - 0;
+#X obj 56 116 metro 100;
+#X obj 49 236 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 46 206 * 127;
+#X obj 46 26 phasor~ 0.000833333;
+#X text 43 259 twenty minute spine;
+#X obj 126 56 s~ spine;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 4 0 2 0;
+#X connect 6 0 5 0;
+#X connect 7 0 2 0;
+#X connect 7 0 9 0;
+#X restore 21 396 pd spine;
