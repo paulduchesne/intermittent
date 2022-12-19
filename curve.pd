@@ -1,11 +1,11 @@
-#N canvas -1 31 1920 979 12;
-#X obj 262 307 wrap~;
-#X obj 272 337 loadbang;
-#X msg 272 367 1;
-#X obj 262 427 snapshot~;
-#X obj 272 397 metro 100;
-#X obj 262 487 * 127;
-#X obj 262 277 *~;
+#N canvas 954 32 948 963 12;
+#X obj 312 375 wrap~;
+#X obj 322 405 loadbang;
+#X msg 322 435 1;
+#X obj 312 495 snapshot~;
+#X obj 322 465 metro 100;
+#X obj 312 555 * 127;
+#X obj 312 345 *~;
 #X obj 440 75 loadbang;
 #X msg 440 105 7;
 #X obj 370 283 expr 1 / ($f1 / 1200);
@@ -37,7 +37,7 @@
 #X obj 498 605 / 2;
 #X obj 498 635 + 0.5;
 #X obj 498 665 * 127;
-#X obj 235 575 s \$0-loop;
+#X obj 285 643 s \$0-loop;
 #X obj 378 222 r \$0-length-send;
 #X obj 55 884 table \$0-shape;
 #X msg 55 787 read -resize shapes/shape01.txt \$0-shape;
@@ -48,9 +48,18 @@
 #X obj 33 30 hsl 160 15 0 127 0 0 \$0-loop-send \$0-loop empty -2 -8
 0 10 #9c00ff #ffffff #000000 0 1;
 #X floatatom 220 30 5 0 0 1 length \$0-length \$0-length-send 0;
-#X obj 260 158 r~ spine;
+#X obj 310 226 r~ spine;
 #X text 834 104 seeing as how all control signals should be a combination
 of two modules \, maybe there should be two as subpatch?;
+#X text 221 60 shape select;
+#X text 224 80 mul;
+#X text 230 101 add;
+#X text 46 143 okay so first iteration;
+#X text 46 178 four basic sliders;
+#X text 47 213 combine two sets into single signal;
+#X text 55 252 and this is then applied to cutoff/pitch;
+#X text 62 292 also \, a preset system live -> writes -> reads -> process
+;
 #X connect 0 0 3 0;
 #X connect 0 0 16 0;
 #X connect 1 0 2 0;
